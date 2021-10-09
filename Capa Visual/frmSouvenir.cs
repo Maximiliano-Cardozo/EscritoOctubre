@@ -37,7 +37,7 @@ namespace Capa_Visual
                     float.Parse(txtPrecio.Text));
 
                 MessageBox.Show("Producto agregado correctamente.");
-
+                LimpiarTabla();
                 ListarSouvenirDesdeBd();
             }
             catch (Exception ex)
@@ -91,17 +91,13 @@ namespace Capa_Visual
 
         private void btnActualizarLista_Click(object sender, EventArgs e)
         {
-            LimpiarTabla(dgvSouvenir);
+            LimpiarTabla();
            ListarSouvenirDesdeBd();
         }
 
         
 
-        //private void dgwSouvenir_selectedRowsButton_Click(object sender, System.EventArgs e)
-        //{
-        //    Int32 FilaSeleccionada =dgwSouvenir.Rows.GetRowCount(DataGridViewElementStates.Selected);
-        //    MessageBox.Show(FilaSeleccionada.ToString());
-        //}
+    
 
         private void btnLimpiarTxtBox_Click(object sender, EventArgs e)
         {
@@ -127,10 +123,11 @@ namespace Capa_Visual
         }
 
 
-        private void LimpiarTabla(DataGridView Grilla)
+        private void LimpiarTabla()
         {
+            dgvSouvenir.Rows.Clear();
 
-            
+
         }
 
         private void dgvSouvenir_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -167,6 +164,7 @@ namespace Capa_Visual
 
                 MessageBox.Show("Producto actualizado correctamente." );
 
+                LimpiarTabla();
                 ListarSouvenirDesdeBd();
             }
             catch (Exception ex)
@@ -184,7 +182,8 @@ namespace Capa_Visual
                     Int32.Parse(txtId.Text));
 
                 MessageBox.Show("Producto eliminado correctamente.");
-
+                LimpiarTabla();
+                LimpiarCampos();
                 ListarSouvenirDesdeBd();
             }
             catch (Exception ex)

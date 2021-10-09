@@ -71,9 +71,9 @@ namespace Capa_Visual
             this.Stock,
             this.Precio,
             this.Fecha});
-            this.dgvSouvenir.Location = new System.Drawing.Point(69, 12);
+            this.dgvSouvenir.Location = new System.Drawing.Point(13, 12);
             this.dgvSouvenir.Name = "dgvSouvenir";
-            this.dgvSouvenir.Size = new System.Drawing.Size(643, 127);
+            this.dgvSouvenir.Size = new System.Drawing.Size(775, 127);
             this.dgvSouvenir.TabIndex = 1;
             this.dgvSouvenir.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvSouvenir_CellClick);
             // 
