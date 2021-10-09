@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Capa_Datos;
-
+using System.Data;
 namespace Capa_Logica
 {
     public static class SouvenirControlador
@@ -26,9 +26,10 @@ namespace Capa_Logica
         }
 
 
-        public static void ListarProductos()
+        public static DataTable ListarSouvenir()
         {
-
+           SouvenirModelo p = new SouvenirModelo {};
+            return p.Listar();
         }
     }
 

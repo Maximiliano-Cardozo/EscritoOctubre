@@ -19,18 +19,20 @@ namespace Capa_Datos
         public DateTime Fecha;
 
 
-        public DataTable ListarProductos()
+        public DataTable Listar()
         {
-            comando.CommandText = "SELECT * FROM souvenir ";
+            comando.CommandText = "SELECT id,nombre,descripcion,stock,precio,fecha FROM souvenir ";
             comando.Prepare();
 
-            reader = comando.ExecuteReader();
+            lector = comando.ExecuteReader();
 
             DataTable dt = new DataTable();
-            dt.Load(reader);
+            dt.Load(lector);
 
             return dt;
         }
+
+
             public void Guardar()
         {
             PrepararQuery();
@@ -45,7 +47,7 @@ namespace Capa_Datos
         private void PrepararQuery()
         {
             this.comando.CommandText =
-                "INSERT INTO producto (nombre,descripcion,stock,precio)" +
+                "INSERT INTO souvenir (nombre,descripcion,stock,precio)" +
                 "VALUES (@nombre,@descripcion,@stock,@precio)";
 
             this.comando.Parameters.AddWithValue("@nombre", this.Nombre);
@@ -56,4 +58,14 @@ namespace Capa_Datos
             this.comando.Prepare();
         }
     }
+
+    //public void Eliminar()
+    //{
+
+    //}
+
+    //public void Modificar()
+    //{
+
+    //}
 }

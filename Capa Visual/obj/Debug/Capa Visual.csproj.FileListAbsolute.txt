@@ -9,7 +9,6 @@ C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Visu
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.exe
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.pdb
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmPrincipal.resources
-C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmProducto.resources
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Logica.dll
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Datos.dll
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\MySql.Data.dll
@@ -40,3 +39,4 @@ C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\K4os.Hash
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.exe.config
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.csproj.CopyComplete
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmSouvenir.resources

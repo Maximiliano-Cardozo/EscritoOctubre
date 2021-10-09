@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgwProducto = new System.Windows.Forms.DataGridView();
+            this.dgwSouvenir = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -46,17 +46,32 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.btnActualizarLista = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgwProducto)).BeginInit();
+            this.btnLlamarAVentanaPrincipal = new System.Windows.Forms.Button();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Stock = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Precio = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSouvenir)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dgwProducto
+            // dgwSouvenir
             // 
-            this.dgwProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgwProducto.Location = new System.Drawing.Point(12, 12);
-            this.dgwProducto.Name = "dgwProducto";
-            this.dgwProducto.Size = new System.Drawing.Size(776, 127);
-            this.dgwProducto.TabIndex = 1;
+            this.dgwSouvenir.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwSouvenir.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.Nombre,
+            this.Descripcion,
+            this.Stock,
+            this.Precio,
+            this.Fecha});
+            this.dgwSouvenir.Location = new System.Drawing.Point(98, 12);
+            this.dgwSouvenir.Name = "dgwSouvenir";
+            this.dgwSouvenir.Size = new System.Drawing.Size(643, 127);
+            this.dgwSouvenir.TabIndex = 1;
+            this.dgwSouvenir.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgwSouvenir_CellContentClick);
             // 
             // txtNombre
             // 
@@ -217,19 +232,62 @@
             this.btnActualizarLista.TabIndex = 14;
             this.btnActualizarLista.Text = "Actualizar";
             this.btnActualizarLista.UseVisualStyleBackColor = true;
+            this.btnActualizarLista.Click += new System.EventHandler(this.btnActualizarLista_Click);
             // 
-            // frmProducto
+            // btnLlamarAVentanaPrincipal
+            // 
+            this.btnLlamarAVentanaPrincipal.Location = new System.Drawing.Point(321, 491);
+            this.btnLlamarAVentanaPrincipal.Name = "btnLlamarAVentanaPrincipal";
+            this.btnLlamarAVentanaPrincipal.Size = new System.Drawing.Size(147, 23);
+            this.btnLlamarAVentanaPrincipal.TabIndex = 15;
+            this.btnLlamarAVentanaPrincipal.Text = "Volver al menu principal";
+            this.btnLlamarAVentanaPrincipal.UseVisualStyleBackColor = true;
+            this.btnLlamarAVentanaPrincipal.Click += new System.EventHandler(this.btnLlamarAVentanaPrincipal_Click);
+            // 
+            // Id
+            // 
+            this.Id.HeaderText = "Id";
+            this.Id.Name = "Id";
+            // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            // 
+            // Stock
+            // 
+            this.Stock.HeaderText = "Stock";
+            this.Stock.Name = "Stock";
+            // 
+            // Precio
+            // 
+            this.Precio.HeaderText = "Precio";
+            this.Precio.Name = "Precio";
+            // 
+            // Fecha
+            // 
+            this.Fecha.HeaderText = "Fecha";
+            this.Fecha.Name = "Fecha";
+            // 
+            // frmSouvenir
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 526);
+            this.ControlBox = false;
+            this.Controls.Add(this.btnLlamarAVentanaPrincipal);
             this.Controls.Add(this.btnActualizarLista);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dgwProducto);
-            this.Name = "frmProducto";
+            this.Controls.Add(this.dgwSouvenir);
+            this.Name = "frmSouvenir";
             this.Text = "Producto";
             this.Load += new System.EventHandler(this.frmProducto_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.dgwProducto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwSouvenir)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -238,7 +296,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgwProducto;
+        private System.Windows.Forms.DataGridView dgwSouvenir;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPrecio;
@@ -256,5 +314,12 @@
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnActualizarLista;
+        private System.Windows.Forms.Button btnLlamarAVentanaPrincipal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Stock;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Precio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
     }
 }
