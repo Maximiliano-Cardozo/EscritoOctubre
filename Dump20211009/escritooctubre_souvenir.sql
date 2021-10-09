@@ -31,7 +31,7 @@ CREATE TABLE `souvenir` (
   `Fecha` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `Estado` set('Activo','Inactivo') DEFAULT 'Activo',
   PRIMARY KEY (`Id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -40,7 +40,7 @@ CREATE TABLE `souvenir` (
 
 LOCK TABLES `souvenir` WRITE;
 /*!40000 ALTER TABLE `souvenir` DISABLE KEYS */;
-INSERT INTO `souvenir` VALUES (1,'Estatua','Marmol medidas 215x30mm',200,25.00,'2021-10-09 14:51:54','Activo'),(2,'1','1',1,1.00,'2021-10-09 15:49:39','Activo'),(3,'d','d',2,2.00,'2021-10-09 16:00:00','Activo'),(4,'a','a',3,3.00,'2021-10-09 16:43:00','Activo'),(5,'adfasdf','adsfasdf',324,434.00,'2021-10-09 17:36:26','Activo');
+INSERT INTO `souvenir` VALUES (1,'Estatua','Marmol medidas 215x30mm',200,50.00,'2021-10-09 20:04:00','Activo'),(2,'1','1',1,1.00,'2021-10-09 19:57:24','Inactivo'),(3,'Llavero','Llavero de madera.',200,5.00,'2021-10-09 20:16:43','Activo'),(4,'Collar','Collar de nylon y perlas',30,35.00,'2021-10-09 20:16:29','Activo'),(5,'Lapicera de pluma','Lapicera de tinta azul , con forma de pluma de silicona.',324,12.00,'2021-10-09 20:16:23','Activo'),(6,'sdfas','sdfasdf',2323,423423.00,'2021-10-09 20:14:43','Inactivo'),(7,'dasdf','sdfasdf',323,2323.23,'2021-10-09 20:16:02','Inactivo'),(8,'1','1',1,14.00,'2021-10-09 20:14:53','Inactivo');
 /*!40000 ALTER TABLE `souvenir` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -53,4 +53,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-09 15:45:21
+-- Dump completed on 2021-10-09 17:20:20
