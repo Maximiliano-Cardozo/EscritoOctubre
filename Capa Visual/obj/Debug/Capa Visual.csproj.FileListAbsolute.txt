@@ -1,6 +1,12 @@
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.csprojAssemblyReference.cache
-C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.Form1.resources
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.Properties.Resources.resources
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.csproj.GenerateResource.cache
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.csproj.CoreCompileInputs.cache
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.FrmLogin.resources
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Visual.exe.config
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Visual.exe
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\Capa Visual.pdb
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.exe
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.pdb
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmPrincipal.resources
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmProducto.resources

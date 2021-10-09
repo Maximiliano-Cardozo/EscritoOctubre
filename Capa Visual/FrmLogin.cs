@@ -15,6 +15,7 @@ namespace Capa_Visual
         public FrmLogin()
         {
             InitializeComponent();
+            btnIngresar.Enabled = false;
         }
         //public void ModificarVisibilidadDelBotonIngresar() {
         //    if (txtNombre.Text is null = false)
@@ -25,7 +26,32 @@ namespace Capa_Visual
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
+            VerificarCamposCompletos();
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+            
+        }
+
+        private void btnIngresar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VerificarCamposCompletos()
+        {
+            if  (string.IsNullOrEmpty(txtNombre.Text) | string.IsNullOrEmpty(txtPassword.Text))
+                btnIngresar.Enabled = false;
+            else
+                btnIngresar.Enabled = true;
+        }
+
+        private void txtPassword_TextChanged(object sender, EventArgs e)
+        {
+            VerificarCamposCompletos();
         }
     }
 }

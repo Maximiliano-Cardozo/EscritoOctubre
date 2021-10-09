@@ -33,7 +33,7 @@ namespace Capa_Datos
         protected void inicializarConexion()
         {
             this.IpDb = "localhost";
-            this.NombreDb = "escrito";
+            this.NombreDb = "escritooctubre";
             this.UsuarioDb = "root";
             this.PasswordDb = "1492";
 
