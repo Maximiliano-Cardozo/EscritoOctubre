@@ -25,4 +25,6 @@ namespace Capa_Logica
             p.Guardar();
         }
     }
+
+    
 }

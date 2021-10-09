@@ -18,6 +18,8 @@ namespace Capa_Datos
 
 
 
+        
+      
         public void Guardar()
         {
             PrepararQuery();
@@ -32,8 +34,8 @@ namespace Capa_Datos
         private void PrepararQuery()
         {
             this.comando.CommandText =
-                "INSERT INTO producto (nombre,descripcion,stock,precio,)" +
-                "Values(@nombre,@descripcion,@stock,@precio)";
+                "INSERT INTO producto (nombre,descripcion,stock,precio)" +
+                "VALUES (@nombre,@descripcion,@stock,@precio)";
 
             this.comando.Parameters.AddWithValue("@nombre", this.Nombre);
             this.comando.Parameters.AddWithValue("@descripcion", this.Descripcion);

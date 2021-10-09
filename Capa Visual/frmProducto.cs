@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_Logica;
-
 namespace Capa_Visual
 {
     public partial class frmProducto : Form
@@ -25,10 +24,37 @@ namespace Capa_Visual
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            //try
-            //{
-            //    Producdo
-            //}
+            try
+            {
+                ProductoControlador.AltaProducto(
+                    txtNombre.Text,
+                    txtDescripcion.Text,
+                    Int32.Parse(txtStock.Text),
+                    float.Parse(txtPrecio.Text));
+
+                MessageBox.Show("Producto agregado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La accion no puedo ser realizada." + ex);
+
+            }
         }
+
+        private void frmProducto_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form formulario = new frmPrincipal();
+            formulario.Show();
+        }
+
+
+
+
     }
 }

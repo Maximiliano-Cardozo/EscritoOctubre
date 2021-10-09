@@ -34,8 +34,8 @@ namespace Capa_Datos
         {
             this.IpDb = "localhost";
             this.NombreDb = "escritooctubre";
-            this.UsuarioDb = "root";
-            this.PasswordDb = "1492";
+            this.UsuarioDb = "usuario";
+            this.PasswordDb = "12340";
 
         }
     }
