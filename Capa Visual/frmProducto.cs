@@ -25,10 +25,10 @@ namespace Capa_Visual
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
-            try
-            {
-                Producdo
-            }
+            //try
+            //{
+            //    Producdo
+            //}
         }
     }
 }
