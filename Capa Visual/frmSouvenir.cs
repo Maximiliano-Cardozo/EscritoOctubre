@@ -61,7 +61,7 @@ namespace Capa_Visual
 
         private void frmProducto_Load_1(object sender, EventArgs e)
         {
-            ListarSouvenirDesdeBd();
+   
         }
 
         private void ListarSouvenirDesdeBd()
@@ -76,13 +76,12 @@ namespace Capa_Visual
                     dtsouvenir.Rows[i][3],
                     dtsouvenir.Rows[i][4],
                     dtsouvenir.Rows[i][5]);
-                
-                
+                               
             }
-        
-           
+                   
         }
 
+       
         private void btnLlamarAVentanaPrincipal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -92,12 +91,22 @@ namespace Capa_Visual
 
         private void btnActualizarLista_Click(object sender, EventArgs e)
         {
-            ListarSouvenirDesdeBd();
+           
+           ListarSouvenirDesdeBd();
         }
 
         private void dgwSouvenir_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-           
+            int n = e.RowIndex;
+            if (n != -1)
+            {
+                txtId.Text = (String)dgwSouvenir.Rows[n].Cells[1].Value;
+                txtNombre.Text = (String)dgwSouvenir.Rows[n].Cells[2].Value;
+                txtDescripcion.Text = (String)dgwSouvenir.Rows[n].Cells[3].Value;
+                txtStock.Text = (String)dgwSouvenir.Rows[n].Cells[4].Value;
+                txtPrecio.Text = (String)dgwSouvenir.Rows[n].Cells[5].Value;
+                txtFecha.Text = (String)dgwSouvenir.Rows[n].Cells[6].Value;
+            }
         }
     }
 
