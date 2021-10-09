@@ -98,18 +98,27 @@ namespace Capa_Visual
         private void dgwSouvenir_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int n = e.RowIndex;
-            if (n != -1)
-            {
-                txtId.Text = (String)dgwSouvenir.Rows[n].Cells[1].Value;
-                txtNombre.Text = (String)dgwSouvenir.Rows[n].Cells[2].Value;
-                txtDescripcion.Text = (String)dgwSouvenir.Rows[n].Cells[3].Value;
-                txtStock.Text = (String)dgwSouvenir.Rows[n].Cells[4].Value;
-                txtPrecio.Text = (String)dgwSouvenir.Rows[n].Cells[5].Value;
-                txtFecha.Text = (String)dgwSouvenir.Rows[n].Cells[6].Value;
-            }
+
+            MessageBox.Show(n.ToString());
+            //if (n != -1)
+            //{
+            //    txtId.Text = (String)dgwSouvenir.Rows[n].Cells[1].Value;
+            //    txtNombre.Text = (String)dgwSouvenir.Rows[n].Cells[2].Value;
+            //    txtDescripcion.Text = (String)dgwSouvenir.Rows[n].Cells[3].Value;
+            //    txtStock.Text = (String)dgwSouvenir.Rows[n].Cells[4].Value;
+            //    txtPrecio.Text = (String)dgwSouvenir.Rows[n].Cells[5].Value;
+            //    txtFecha.Text = (String)dgwSouvenir.Rows[n].Cells[6].Value;
+            //}
         }
+
+        private void dgwSouvenir_selectedRowsButton_Click(object sender, System.EventArgs e)
+        {
+            Int32 FilaSeleccionada =dgwSouvenir.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            MessageBox.Show(FilaSeleccionada.ToString());
+        }
+
     }
 
-
+    
     
 }
