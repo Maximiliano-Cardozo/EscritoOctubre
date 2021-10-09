@@ -35,7 +35,7 @@
             // 
             // btnSouvenir
             // 
-            this.btnSouvenir.Location = new System.Drawing.Point(112, 97);
+            this.btnSouvenir.Location = new System.Drawing.Point(33, 24);
             this.btnSouvenir.Name = "btnSouvenir";
             this.btnSouvenir.Size = new System.Drawing.Size(137, 71);
             this.btnSouvenir.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnCompra
             // 
-            this.btnCompra.Location = new System.Drawing.Point(434, 97);
+            this.btnCompra.Location = new System.Drawing.Point(211, 24);
             this.btnCompra.Name = "btnCompra";
             this.btnCompra.Size = new System.Drawing.Size(152, 71);
             this.btnCompra.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(299, 306);
+            this.btnSalir.Location = new System.Drawing.Point(151, 176);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(75, 23);
             this.btnSalir.TabIndex = 2;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(717, 412);
+            this.ClientSize = new System.Drawing.Size(394, 247);
             this.ControlBox = false;
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnCompra);

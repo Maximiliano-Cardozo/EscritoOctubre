@@ -30,7 +30,7 @@ namespace Capa_Visual
         {
             try
             {
-                SouvenirControlador.AltaProducto(
+                SouvenirControlador.AltaSouvenir(
                     txtNombre.Text,
                     txtDescripcion.Text,
                     Int32.Parse(txtStock.Text),
@@ -153,8 +153,49 @@ namespace Capa_Visual
         {
 
         }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SouvenirControlador.ModificarSouvenir(
+                    Int32.Parse(txtId.Text),
+                    txtNombre.Text,
+                    txtDescripcion.Text,
+                    Int32.Parse(txtStock.Text),
+                    float.Parse(txtPrecio.Text));
+
+                MessageBox.Show("Producto agregado correctamente." );
+
+                ListarSouvenirDesdeBd();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La accion no puedo ser realizada." + ex);
+                Console.WriteLine(ex);
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                SouvenirControlador.EliminarSouvenir(
+                    Int32.Parse(txtId.Text));
+
+                MessageBox.Show("Producto eliminado correctamente.");
+
+                ListarSouvenirDesdeBd();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("La accion no puedo ser realizada." + ex);
+                Console.WriteLine(ex);
+            }
+        }
+    }
     }
 
     
     
-}
+

@@ -9,13 +9,13 @@ namespace Capa_Logica
 {
     public static class SouvenirControlador
     {
-        public static void AltaProducto(
+        public static void AltaSouvenir(
             string Nombre,
             string Descripcion,
             int Stock,
             float Precio)
         {
-            SouvenirModelo p= new SouvenirModelo();
+            SouvenirModelo p = new SouvenirModelo();
 
             p.Nombre = Nombre;
             p.Descripcion = Descripcion;
@@ -24,14 +24,45 @@ namespace Capa_Logica
 
             p.Guardar();
         }
+        public static void ModificarSouvenir(
+            int Id,
+            string Nombre,
+            string Descripcion,
+            int Stock,
+            float Precio)
+        {
 
+            SouvenirModelo p = new SouvenirModelo();
+
+            p.Id = Id;
+            p.Nombre = Nombre;
+            p.Descripcion = Descripcion;
+            p.Stock = Stock;
+            p.Precio = Precio;
+
+            p.Modificar();
+
+
+        }
 
         public static DataTable ListarSouvenir()
         {
-           SouvenirModelo p = new SouvenirModelo {};
+            SouvenirModelo p = new SouvenirModelo { };
             return p.Listar();
         }
+        
+        public static void EliminarSouvenir(int Id) { 
+            SouvenirModelo p = new SouvenirModelo();
+                   
+            p.Id=Id;
+            p.Eliminar();
+        }
+
     }
 
-    
 }
+
+
+
+    
+

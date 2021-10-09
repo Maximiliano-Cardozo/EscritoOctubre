@@ -21,7 +21,7 @@ namespace Capa_Datos
 
         public DataTable Listar()
         {
-            comando.CommandText = "SELECT id,nombre,descripcion,stock,precio,fecha FROM souvenir ";
+            comando.CommandText = "SELECT id,nombre,descripcion,stock,precio,fecha FROM souvenir WHERE estado = 'Activo' ";
             comando.Prepare();
 
             lector = comando.ExecuteReader();
@@ -57,15 +57,38 @@ namespace Capa_Datos
        
             this.comando.Prepare();
         }
+   
+
+    public void Eliminar()
+    {
+            this.comando.CommandText = "UPDATE souvenir SET Estado = 'Inactivo' WHERE id = @id";
+            this.comando.Parameters.AddWithValue("@Id", Id);
+
+            comando.Prepare();
+            comando.ExecuteNonQuery();
+        }
+
+    public void Modificar() {
+            
+            
+       
+           this.comando.CommandText = "UPDATE souvenir SET Nombre = @Nombre," +
+            " Stock = @Stock , Precio = @Precio ," +
+            " Descripcion = @Descripcion , WHERE id = @id";
+
+           this.comando.Parameters.AddWithValue("@Nombre", Nombre);
+           this.comando.Parameters.AddWithValue("@Stock", Stock);
+           this.comando.Parameters.AddWithValue("@Precio", Precio);
+           this.comando.Parameters.AddWithValue("@Descripcion", Descripcion);
+           this.comando.Parameters.AddWithValue("@Id", Id);
+      
+          comando.Prepare();
+          comando.ExecuteNonQuery();
+        
+     
     }
 
-    //public void Eliminar()
-    //{
 
-    //}
-
-    //public void Modificar()
-    //{
-
-    //}
+    }
 }
+
