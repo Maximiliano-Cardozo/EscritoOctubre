@@ -1,6 +1,6 @@
 ﻿namespace Capa_Visual
 {
-    partial class frmProducto
+    partial class frmSouvenir
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgwProducto = new System.Windows.Forms.DataGridView();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.txtStock = new System.Windows.Forms.TextBox();
             this.txtPrecio = new System.Windows.Forms.TextBox();
@@ -46,17 +46,17 @@
             this.lblFecha = new System.Windows.Forms.Label();
             this.lblId = new System.Windows.Forms.Label();
             this.btnActualizarLista = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProducto)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgwProducto
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(776, 127);
-            this.dataGridView1.TabIndex = 1;
+            this.dgwProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgwProducto.Location = new System.Drawing.Point(12, 12);
+            this.dgwProducto.Name = "dgwProducto";
+            this.dgwProducto.Size = new System.Drawing.Size(776, 127);
+            this.dgwProducto.TabIndex = 1;
             // 
             // txtNombre
             // 
@@ -225,10 +225,11 @@
             this.ClientSize = new System.Drawing.Size(800, 526);
             this.Controls.Add(this.btnActualizarLista);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgwProducto);
             this.Name = "frmProducto";
             this.Text = "Producto";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmProducto_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.dgwProducto)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -237,7 +238,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgwProducto;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.TextBox txtStock;
         private System.Windows.Forms.TextBox txtPrecio;

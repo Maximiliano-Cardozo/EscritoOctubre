@@ -30,7 +30,7 @@ namespace Capa_Visual
         private void btnProductos_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form formulario = new frmProducto();
+            Form formulario = new frmSouvenir();
             formulario.Show();
         }
 

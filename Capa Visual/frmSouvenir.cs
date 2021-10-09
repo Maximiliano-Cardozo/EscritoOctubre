@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using Capa_Logica;
 namespace Capa_Visual
 {
-    public partial class frmProducto : Form
+    public partial class frmSouvenir : Form
     {
-        public frmProducto()
+        public frmSouvenir()
         {
             InitializeComponent();
         }
@@ -26,7 +26,7 @@ namespace Capa_Visual
         {
             try
             {
-                ProductoControlador.AltaProducto(
+                SouvenirControlador.AltaProducto(
                     txtNombre.Text,
                     txtDescripcion.Text,
                     Int32.Parse(txtStock.Text),
@@ -53,8 +53,14 @@ namespace Capa_Visual
             formulario.Show();
         }
 
+        private void frmProducto_Load_1(object sender, EventArgs e)
+        {
+            ListarProductosDesdeBd();
+        }
 
-
-
+        private void ListarProductosDesdeBd()
+        {
+            
+        }
     }
 }

@@ -7,7 +7,7 @@ using Capa_Datos;
 
 namespace Capa_Logica
 {
-    public static class ProductoControlador
+    public static class SouvenirControlador
     {
         public static void AltaProducto(
             string Nombre,
@@ -15,7 +15,7 @@ namespace Capa_Logica
             int Stock,
             float Precio)
         {
-            ProductoModelo p= new ProductoModelo();
+            SouvenirModelo p= new SouvenirModelo();
 
             p.Nombre = Nombre;
             p.Descripcion = Descripcion;
@@ -23,6 +23,12 @@ namespace Capa_Logica
             p.Precio = Precio;
 
             p.Guardar();
+        }
+
+
+        public static void ListarProductos()
+        {
+
         }
     }
 

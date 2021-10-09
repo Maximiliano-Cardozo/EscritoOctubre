@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MySql.Data.MySqlClient;
+using System.Data;
 
 namespace Capa_Datos
 {
-    public class ProductoModelo : Modelo
+    public class SouvenirModelo : Modelo
     {
 
         public int Id;
@@ -14,13 +16,22 @@ namespace Capa_Datos
         public string Descripcion;
         public int Stock;
         public float Precio;
-        public string Fecha;
+        public DateTime Fecha;
 
 
+        public DataTable ListarProductos()
+        {
+            comando.CommandText = "SELECT * FROM souvenir ";
+            comando.Prepare();
 
-        
-      
-        public void Guardar()
+            reader = comando.ExecuteReader();
+
+            DataTable dt = new DataTable();
+            dt.Load(reader);
+
+            return dt;
+        }
+            public void Guardar()
         {
             PrepararQuery();
             EjecutarQuery();

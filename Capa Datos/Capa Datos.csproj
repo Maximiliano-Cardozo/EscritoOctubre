@@ -87,7 +87,7 @@
     <Compile Include="CompraModelo.cs" />
     <Compile Include="Modelo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ProductoModelo.cs" />
+    <Compile Include="SouvenirModelo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
