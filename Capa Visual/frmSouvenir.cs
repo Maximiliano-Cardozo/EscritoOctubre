@@ -42,8 +42,8 @@ namespace Capa_Visual
             }
             catch (Exception ex)
             {
-                MessageBox.Show("La accion no puedo ser realizada." + ex);
-
+                MessageBox.Show("La accion no puedo ser realizada." );
+                Console.WriteLine(ex);
             }
         }
 
@@ -70,7 +70,7 @@ namespace Capa_Visual
 
             for (int i =0; i < dtsouvenir.Rows.Count; i++)
             {
-                dgwSouvenir.Rows.Add(dtsouvenir.Rows[i][0],
+                dgvSouvenir.Rows.Add(dtsouvenir.Rows[i][0],
                     dtsouvenir.Rows[i][1],
                     dtsouvenir.Rows[i][2],
                     dtsouvenir.Rows[i][3],
@@ -80,8 +80,8 @@ namespace Capa_Visual
             }
                    
         }
+      
 
-       
         private void btnLlamarAVentanaPrincipal_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -91,32 +91,68 @@ namespace Capa_Visual
 
         private void btnActualizarLista_Click(object sender, EventArgs e)
         {
-           
+            LimpiarTabla(dgvSouvenir);
            ListarSouvenirDesdeBd();
         }
 
-        private void dgwSouvenir_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            int n = e.RowIndex;
+        
 
-            MessageBox.Show(n.ToString());
-            //if (n != -1)
-            //{
-            //    txtId.Text = (String)dgwSouvenir.Rows[n].Cells[1].Value;
-            //    txtNombre.Text = (String)dgwSouvenir.Rows[n].Cells[2].Value;
-            //    txtDescripcion.Text = (String)dgwSouvenir.Rows[n].Cells[3].Value;
-            //    txtStock.Text = (String)dgwSouvenir.Rows[n].Cells[4].Value;
-            //    txtPrecio.Text = (String)dgwSouvenir.Rows[n].Cells[5].Value;
-            //    txtFecha.Text = (String)dgwSouvenir.Rows[n].Cells[6].Value;
-            //}
+        //private void dgwSouvenir_selectedRowsButton_Click(object sender, System.EventArgs e)
+        //{
+        //    Int32 FilaSeleccionada =dgwSouvenir.Rows.GetRowCount(DataGridViewElementStates.Selected);
+        //    MessageBox.Show(FilaSeleccionada.ToString());
+        //}
+
+        private void btnLimpiarTxtBox_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
         }
 
-        private void dgwSouvenir_selectedRowsButton_Click(object sender, System.EventArgs e)
+        private void LimpiarCampos()
         {
-            Int32 FilaSeleccionada =dgwSouvenir.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            MessageBox.Show(FilaSeleccionada.ToString());
+            txtId.Text = null;
+            txtFecha.Text = null;
+            txtDescripcion.Text = null;
+            txtNombre.Text = null;
+            txtPrecio.Text = null;
+            txtStock.Text = null;
         }
 
+        private void dgvSouvenir_SelectionChanged(object sender, EventArgs e)
+        {
+            //Obtienes la fila actual
+            var row = (sender as DataGridView).CurrentRow;
+
+            txtId.Text = row.Cells[0].Value.ToString();
+        }
+
+
+        private void LimpiarTabla(DataGridView Grilla)
+        {
+
+            
+        }
+
+        private void dgvSouvenir_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var row = (sender as DataGridView).CurrentRow;
+            txtId.Text = row.Cells[0].Value.ToString();
+            txtFecha.Text = row.Cells[5].Value.ToString();
+            txtNombre.Text = row.Cells[1].Value.ToString();
+            txtStock.Text = row.Cells[3].Value.ToString();
+            txtPrecio.Text = row.Cells[4].Value.ToString();
+            txtDescripcion.Text = row.Cells[2].Value.ToString();
+        }
+
+        private void lblId_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtId_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 
     
