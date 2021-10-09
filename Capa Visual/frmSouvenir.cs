@@ -165,7 +165,7 @@ namespace Capa_Visual
                     Int32.Parse(txtStock.Text),
                     float.Parse(txtPrecio.Text));
 
-                MessageBox.Show("Producto agregado correctamente." );
+                MessageBox.Show("Producto actualizado correctamente." );
 
                 ListarSouvenirDesdeBd();
             }

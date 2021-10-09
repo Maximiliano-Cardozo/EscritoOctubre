@@ -74,7 +74,7 @@ namespace Capa_Datos
        
            this.comando.CommandText = "UPDATE souvenir SET Nombre = @Nombre," +
             " Stock = @Stock , Precio = @Precio ," +
-            " Descripcion = @Descripcion , WHERE id = @id";
+            " Descripcion = @Descripcion WHERE id = @id";
 
            this.comando.Parameters.AddWithValue("@Nombre", Nombre);
            this.comando.Parameters.AddWithValue("@Stock", Stock);
