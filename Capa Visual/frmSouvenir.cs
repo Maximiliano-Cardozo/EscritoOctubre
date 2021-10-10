@@ -28,6 +28,7 @@ namespace Capa_Visual
 
         private void btnAlta_Click(object sender, EventArgs e)
         {
+           
             try
             {
                 SouvenirControlador.AltaSouvenir(
@@ -45,6 +46,8 @@ namespace Capa_Visual
                 MessageBox.Show("La accion no puedo ser realizada." );
                 Console.WriteLine(ex);
             }
+            
+                   
         }
 
         private void frmProducto_Load(object sender, EventArgs e)
@@ -102,11 +105,12 @@ namespace Capa_Visual
         private void btnLimpiarTxtBox_Click(object sender, EventArgs e)
         {
             LimpiarCampos();
+            ActivarBotonAlta();
         }
 
         private void LimpiarCampos()
         {
-            txtId.Text = null;
+            txtId.Text = null ;
             txtFecha.Text = null;
             txtDescripcion.Text = null;
             txtNombre.Text = null;
@@ -148,8 +152,17 @@ namespace Capa_Visual
 
         private void txtId_TextChanged(object sender, EventArgs e)
         {
+            ActivarBotonAlta();
+          }
 
-        }
+        private void ActivarBotonAlta()
+        {
+            if (txtId.Text.ToString() == string.Empty) 
+                btnAlta.Enabled = true;
+
+            else
+                btnAlta.Enabled = false;
+            }
 
         private void btnModificar_Click(object sender, EventArgs e)
         {
@@ -169,7 +182,7 @@ namespace Capa_Visual
             }
             catch (Exception ex)
             {
-                MessageBox.Show("La accion no puedo ser realizada." + ex);
+                MessageBox.Show("La accion no puedo ser realizada." );
                 Console.WriteLine(ex);
             }
         }
