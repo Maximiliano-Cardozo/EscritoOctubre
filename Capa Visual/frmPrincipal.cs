@@ -37,7 +37,7 @@ namespace Capa_Visual
         private void btnCompra_Click(object sender, EventArgs e)
         {
             this.Hide();
-            Form formulario = new frmCompra();
+            Form formulario = new t();
             formulario.Show();
         }
     }

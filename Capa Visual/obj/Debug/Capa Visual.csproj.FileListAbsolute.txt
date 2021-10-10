@@ -40,3 +40,4 @@ C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\bin\Debug\System.Nu
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.exe.config
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa Visual.csproj.CopyComplete
 C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.frmSouvenir.resources
+C:\Users\Maximiliano\source\repos\EscritoOctubre\Capa Visual\obj\Debug\Capa_Visual.t.resources

@@ -10,7 +10,7 @@ namespace Capa_Datos
     {
 
         public int Id;
-        public int IdProducto;
+        public int IdSouvenir;
         public int Cantidad;
         public string Fecha;
 
@@ -30,10 +30,10 @@ namespace Capa_Datos
         private void PrepararQuery()
         {
             this.comando.CommandText =
-                "INSERT INTO compra (IdProducto,Cantidad,)" +
-                "Values(@IdProducto,@Cantidad)";
+                "INSERT INTO compra (IdSouvenir,Cantidad,)" +
+                "Values(@IdSouvenir,@Cantidad)";
 
-            this.comando.Parameters.AddWithValue("@IdProducto", this.IdProducto);
+            this.comando.Parameters.AddWithValue("@IdSouvenir", this.IdSouvenir);
             this.comando.Parameters.AddWithValue("@Cantidad", this.Cantidad);
                     this.comando.Prepare();
         }
